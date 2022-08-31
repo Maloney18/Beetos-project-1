@@ -1,0 +1,87 @@
+.reset-pass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.reset-pass > h2 {
+    font-size: xx-large;
+    text-align: center;
+}
+
+.reset-pass ul {
+    padding: 0;
+    height: 80%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.reset-pass li {
+    display: flex;
+    flex-direction: column;
+}
+
+.reset-pass label {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.reset-pass input {
+    font-size: 17px;
+    padding: 7px;
+    margin-top: 5px;
+    width: 230px;
+    height: 40px;
+    outline: none;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.reset-pass button {
+    font-weight: bold;
+    font-size: 20px;
+    width: 220px;
+    height: 47px;
+    border: 1px solid;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: rgba(29, 160, 242, 0.5);
+    transition: all 0.3s linear;
+    outline: none;
+}
+
+.reset-pass button:hover, .reset-pass button:focus {
+    color: white;
+    box-shadow: 0 0 10px rgb(29 161 242);
+}
+
+.reset-password {
+    position: relative;
+}
+
+.reset-password span {
+    position: absolute;
+    display: flex;          
+    align-items: center;
+    justify-content: center;
+    right: 13px;
+    top: 10px;
+    width: 30px;
+    height: 50px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+    .reset-pass input {
+        width: 320px;
+        height: 45px;
+    }
+
+    .reset-pass button {
+        width: 290px;
+    }
+}

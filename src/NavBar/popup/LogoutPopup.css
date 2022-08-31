@@ -1,0 +1,69 @@
+.logoutNotifier {
+  position: absolute;
+  width: 90%;
+  height: 75vh;
+  top: 50px;
+  z-index: 999;
+  /* border: 1px solid; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notify {
+  background-color: rgb(225, 225, 225);
+  /* border: 1px solid; */
+  padding: 5px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgb(116, 107, 107);
+}
+
+.notify > p {
+  text-align: center;
+}
+
+.notify > .buttons {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buttons > button {
+  margin-top: 10px;
+  padding: 7px;
+  width: 100px;
+  font-weight: bold;
+  font-size: 13px;
+  color: white;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cancel {
+  background-color: orangered;
+  transition: all 0.3s linear;
+}
+
+#cancel:hover {
+  color: black;
+}
+
+#logOut {
+  background-color: lightseagreen;
+ transition: all 0.3s linear;
+}
+
+#logOut:hover {
+  color: black;
+}
+
+.link {
+  color: unset;
+  text-decoration: none;
+}

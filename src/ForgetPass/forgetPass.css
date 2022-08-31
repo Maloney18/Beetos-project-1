@@ -1,0 +1,197 @@
+#goBack {
+    margin-left: 10px;
+    transition: opacity 0.2s linear;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#goBack:hover {
+    opacity: 0.5;
+}
+
+#goBack > h4 {
+    margin: 0;
+}
+
+/* ----------first div styling-------- */
+.first{
+    animation: comeInsideFromRight 0.3s linear forwards;
+}
+
+.first > h2 {
+    margin-bottom: 30px;
+}
+
+.first > ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.first > ul > li {
+    display: flex;
+    flex-direction: column;
+}
+
+.first > ul > li > input {
+    font-size: 17px;
+    padding: 7px;
+    width: 230px;
+    height: 40px;
+    outline: none;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.first > ul > li > label {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.nextBtn {
+    text-align: center;
+}
+
+#nxtBtn {
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+    height: 45px;
+    border: 1px solid;
+    border-radius: 3px;
+    background-color: rgba(29, 160, 242, 0.5);
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+#nxtBtn:hover {
+    box-shadow: 0 0 10px rgba(29, 160, 242, 0.5);
+    color: white;
+}
+/* --------end of first div styling----------- */
+
+/* second div */
+.second {
+    animation: comeInsideFromLeft 0.3s linear forwards;
+}
+
+.second > ul {
+    margin-top: 35px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.second > ul > li {
+    display: flex;
+    flex-direction: column;
+}
+
+.second > ul > li > input {
+    font-size: 17px;
+    padding: 7px;
+    width: 230px;
+    height: 40px;
+    outline: none;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.second > ul > li > label {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.code-msg-p {
+    text-align: center;
+    color: orange;
+} 
+
+.code-msg-span {
+    cursor: pointer;
+    color: orange;
+    transition: opacity 0.3s linear;
+}
+
+.code-msg-span:hover {
+    opacity: 0.7;
+}
+
+#get-new-code {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.recov-buttons {
+    margin: 25px auto 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.recov-buttons > button {
+    font-size: 15px;
+    font-weight: bold;
+    width: 100px;
+    height: 45px;
+    border: 1px solid;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.recov-buttons > #back {
+    transition: all 0.3s linear;
+    background-color: darkorange;
+}
+
+.recov-buttons > #back:hover {
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.788);
+}
+
+.recov-buttons > #verify {
+    transition: all 0.3s linear;
+    background-color: rgba(29, 160, 242, 0.5);
+}
+
+.recov-buttons > #verify:hover {
+    color: white;
+    box-shadow: 0 0 10px rgb(29 161 242);
+}
+
+
+@keyframes comeInsideFromRight {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes comeInsideFromLeft {
+  from {
+    transform: translateX(1000px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 800px) {
+    .first > ul > li > input {
+        width: 300px;
+    }
+
+    .second > ul > li > input {
+        width: 300px;
+    }
+
+    .recov-buttons {
+        width: 500px;
+    }
+}

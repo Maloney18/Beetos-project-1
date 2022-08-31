@@ -1,0 +1,102 @@
+.uploadPage {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+}
+
+h2 {
+    text-align: center;
+}
+
+.upload {
+    border-radius: 3px;
+    width: 350px;
+    height: 50vh;
+    font-weight: bold;
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, 0.534);
+    padding-left: 3px;
+    box-shadow: 0 0 10px rgba(196, 189, 189, 0.938);
+}
+
+.upload > ul {
+  list-style-type: none;
+  height: 73%;
+  padding: 5px;  
+  /* border: 1px solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.upload > ul > li {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 7px;
+    row-gap: 2px;
+}
+
+.upload > ul > li > #file-select {
+    border: 1px solid;
+    outline: none;
+    border-radius: 3px;
+    padding: 2.5px;
+    cursor: pointer;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    outline: none;
+    padding: 3px;
+    border: none;
+    background-color: transparent;
+    border-right: 1px solid;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.upload > ul > li > #rename-file {
+    font-size: 14px;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 5px;
+    outline: none;
+    background-color: white;
+}
+    
+.upload > ul > li > #category {
+    font-size: 11px;
+    width: 80px;
+    background-color: transparent;
+    height: 20px;
+    border-radius: 3px;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.upload >.button {
+    display: flex;
+    justify-content: center;
+}
+
+.upload > .button > button {
+    outline: none;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px;
+    height: 30px;
+    width: 190px;
+    border: 1px solid;
+    border-radius: 2px;
+    background-color: rgba(29, 160, 242, 0.5);
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.upload > .button > button:hover, .upload >.button > button:focus {
+    color: white;
+    box-shadow: 0 0 5px rgb(29, 161, 242);
+}

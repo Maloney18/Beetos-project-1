@@ -1,0 +1,83 @@
+.generalCont {
+  border: 1px solid rgb(185, 180, 180);
+  position: relative;
+  height: 200px;
+  width: 180px;
+  padding: 0;
+  transition: all 0.5s linear;
+}
+
+.generalCont:hover, .generalCont:focus {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.158);
+}
+
+.generalCont > #fileName {
+  position: absolute;
+  bottom: 0;
+  width: 96.5%;
+  height: 20px;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.192);
+  border-top: 1px solid rgb(185, 180, 180);
+  padding: 0 3px;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.692);
+}
+
+.generalCont > .funcs {
+  color: rgb(185, 180, 180);
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 26px;
+  height: 120px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.692);
+}
+
+.delete > span{
+  display: none;
+  position: absolute;
+  font-size: 11px;
+  left: -33px;
+  padding: 1px;
+  background-color:  rgba(197, 194, 194, 0.801);
+}
+
+.edit > span {
+  display: none;
+  position: absolute;
+  font-size: 11px;
+  left: -20px;
+  padding: 1px;
+  background-color:  rgba(197, 194, 194, 0.801);
+}
+
+.download > span {
+  display: none;
+  position: absolute;
+  font-size: 11px;
+  left: -52px;
+  padding: 1px;
+  background-color:  rgba(197, 194, 194, 0.801);
+}
+
+.delete:hover > span, .edit:hover> span , .download:hover > span {
+  display: unset;
+}
+
+.delete, .edit, .download {
+  color: black;
+}
+
+
+/* nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+} */

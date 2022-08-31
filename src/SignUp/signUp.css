@@ -1,0 +1,129 @@
+.sign-up-page {
+    height: 90.9vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.signForm h2 {
+    margin: 0;
+}
+
+.signForm {
+    min-height: 470px;
+    height: 89%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.signForm  > ul{
+    padding: 0;
+    height: 450px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    justify-content: space-evenly;
+}
+
+.signForm > ul > li {
+    display: flex;
+    flex-direction: column;
+}
+
+.signForm > ul > li > input {
+    font-size: 15px;
+    padding: 5px;
+    width: 230px;
+    height: 40px;
+    outline: none;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.signForm > ul > li > .signPass > input {
+    font-size: 15px;
+    padding: 5px;
+    width: 230px;
+    height: 40px;
+    outline: none;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: white;
+    transition: color 1s linear;
+}
+
+.signPass {
+    position: relative;
+}
+
+.seePassword {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    padding: 3px;
+    height: 45px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.signForm > ul > li > label {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.signForm > button {
+    font-size: 20px;
+    font-weight: bold;
+    width: 220px;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 3px;
+    background-color: rgba(29, 160, 242, 0.5);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s linear;
+}
+
+.signForm > button:hover, .signForm > button:focus {
+    color: white;
+    box-shadow: 0 0 5px rgb(29, 161, 242);
+}
+
+.sign-up-page > p {
+    text-align: center;
+    font-size: large;
+}
+
+.sign-up-page > p > span {
+    margin-left: 3px;
+    color: rgb(29, 161, 242);
+    cursor: pointer;
+    transition: color 0.3s linear;
+}
+
+.sign-up-page > p > span:hover {
+    opacity: 0.5;
+    color: rgb(9, 130, 206);
+}
+
+@media screen and (min-width: 800px) {
+    .signForm > ul > li > input {
+        width: 290px;
+    }
+
+    .signForm > ul > li > .signPass > input {
+        width: 290px;
+    }
+
+    .signForm > button {
+        width: 270px;
+    }
+}
