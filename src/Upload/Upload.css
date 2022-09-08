@@ -11,8 +11,9 @@ h2 {
 
 .upload {
     border-radius: 3px;
-    width: 350px;
-    height: 50vh;
+    width: 250px;
+    min-height: 350px;
+    max-height: 50vh;
     font-weight: bold;
     margin: auto;
     border: 1px solid rgba(0, 0, 0, 0.534);
@@ -99,4 +100,10 @@ input[type=file]::-webkit-file-upload-button {
 .upload > .button > button:hover, .upload >.button > button:focus {
     color: white;
     box-shadow: 0 0 5px rgb(29, 161, 242);
+}
+
+@media screen and (min-width: 800px) {
+    .upload {
+        width: 350px;
+    }
 }

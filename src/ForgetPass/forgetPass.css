@@ -90,13 +90,20 @@
     flex-direction: column;
 }
 
-.second > ul > li > input {
-    font-size: 17px;
-    padding: 7px;
-    width: 230px;
-    height: 40px;
+.second > ul > li > .verifying {
+    display: flex;
+    column-gap: 5px;
+    height: 50px;
+}
+
+.coding {
+    box-sizing: border-box;
+    width: 70px;
+    font-size: 20px;
+    padding: 15px 0 15px 30px;
     outline: none;
-    border: 1px solid;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.192);
+    border: none;
     border-radius: 5px;
     background-color: white;
 }
@@ -187,9 +194,9 @@
         width: 300px;
     }
 
-    .second > ul > li > input {
+    /* .second > ul > li > .verifying {
         width: 300px;
-    }
+    } */
 
     .recov-buttons {
         width: 500px;

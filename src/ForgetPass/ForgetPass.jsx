@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router';
 
 const ForgetPass = () =>{
-    const [data, setData] = useState({recovEmail:'' , verifCode:''})
+    const [otp, setOtp] = useState(['', '', '', '']) 
+    const [data, setData] = useState({ recovEmail:''})
 
     function handleChanging(e) {
         const {name,value} = e.target
@@ -15,13 +16,13 @@ const ForgetPass = () =>{
     const [secondDisplayPage, setSecondDisplayPage] = useState(true)
 
     function toggleDisplay () {
-        setSecondDisplayPage(previousDisplay => previousDisplay = !previousDisplay)
-        setDisplayPage(prevDisplay => prevDisplay = !prevDisplay)
+        setSecondDisplayPage(previousDisplay => !previousDisplay)
+        setDisplayPage(prevDisplay => !prevDisplay)
     }
 
     function toggleSecondDisplay () {
-        setDisplayPage(prevDisplay => prevDisplay = !prevDisplay)
-        setSecondDisplayPage(previousDisplay => previousDisplay = !previousDisplay)
+        setDisplayPage(prevDisplay => !prevDisplay)
+        setSecondDisplayPage(previousDisplay => !previousDisplay)
     }
 
     const style = {display: displayPage ? 'none' : 'block' }
@@ -42,7 +43,28 @@ const ForgetPass = () =>{
     }
     // -------ends here--------------
 
-    console.log(data)
+    const handleChange2 = (e, index) => {
+        const {previousSibling, value, nextSibling} = e.target
+        if(isNaN(value)) return false;
+
+        //setting value of each input
+        setOtp([...otp.map((d, idx) => (idx === index) ? value : d)]);
+        
+        //Focus prev input
+        if(!value && previousSibling){
+            previousSibling.focus();
+            return
+        }
+        //FOCUS NEXT INPUT
+        if(nextSibling && value){
+            nextSibling.focus();
+        }
+    };
+    console.log(otp[0] !== '', 'as otp 1')
+    console.log(otp[1] !== '', 'as otp 2')
+    console.log(otp[2] !== '', 'as otp 3')
+    console.log(otp[3] !== '', 'as otp 4')
+
     return(
         <>
             <div id="goBack" onClick={() => handleGoBack()}>
@@ -86,14 +108,24 @@ const ForgetPass = () =>{
                 <ul>
                     <li>
                         <label htmlFor="D-code">Verification Code</label>
-                        <input 
-                            type="text" 
-                            id='D-code' 
-                            name='verifCode'
-                            maxLength={4}
-                            onChange={(e) => handleChanging(e)}
-                            value={data.verifCode}
-                        /> 
+                        <div className="verifying">
+                            {
+                                otp.map((data, index) => {
+                                    return <input
+                                        className="coding"
+                                        placeholder=""
+                                        pattern="\d*"
+                                        maxLength="1"
+                                        name="otp"
+                                        key={index}
+                                        value={data}
+                                        onChange={(e) => handleChange2(e, index)}
+                                        onFocus={e => e.target.focus()}
+                                        required
+                                    />
+                                })
+                            }
+                        </div>
                     </li>
                 </ul>
                 <p id='get-new-code'>Didn't get the code? <span className='code-msg-span'>Resend code</span></p>
@@ -109,7 +141,7 @@ const ForgetPass = () =>{
                     <button 
                         id='verify'
                         onClick={() => handleVerify()}
-                        disabled={data?.verifCode.length !== 4 && true}
+                        disabled={otp[0] === '' || otp[1] === '' || otp[2] === '' || otp[3] === ''}
                     >
                         Verify
                     </button>
