@@ -37,7 +37,8 @@ const LoginPage = () => {
     return(
         <div className="loginPage">
             <form className='loginForm'>
-                <h2>Login</h2>
+                <h2>Login </h2>
+                {/* <progress        /> */}
 
                 <ul>
                     <li>

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router';
 
 const ForgetPass = () =>{
-    const [otp, setOtp] = useState(['', '', '', '']) 
+    const [otp, setOtp] = useState(new Array(4).fill(''))
     const [data, setData] = useState({ recovEmail:''})
 
     function handleChanging(e) {
@@ -60,11 +60,7 @@ const ForgetPass = () =>{
             nextSibling.focus();
         }
     };
-    console.log(otp[0] !== '', 'as otp 1')
-    console.log(otp[1] !== '', 'as otp 2')
-    console.log(otp[2] !== '', 'as otp 3')
-    console.log(otp[3] !== '', 'as otp 4')
-
+    
     return(
         <>
             <div id="goBack" onClick={() => handleGoBack()}>

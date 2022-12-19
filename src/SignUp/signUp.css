@@ -3,24 +3,99 @@
     display: flex;
     flex-direction: column;
     row-gap: 30px;
+
 }
 
 .signForm h2 {
     margin: 0;
 }
 
-.signForm {
-    min-height: 470px;
-    height: 89%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+.move-anime {
+    border: 1px solid;
+    width: 200px;
+    height: 13px;
+    border-radius: 50px;
+    position: relative;
 }
 
-.signForm  > ul{
+.color-anime {
+    position: absolute;
+    height: 100%;
+    width: 55px;
+    border-radius: 50px;
+    background: linear-gradient(to right, rgba(6, 122, 122, 0.966), cyan);
+}
+
+.d-second-animation {
+    animation: animate-color2 0.5s linear forwards;
+}
+
+.d-first-animation {
+    animation: animate-color1 0.5s linear forwards;
+}
+
+@keyframes animate-color1 {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 55px;
+    }
+}
+
+@keyframes animate-color2 {
+    from {
+        width: 50px;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.one , .two {
+    position: absolute;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    border: 1px solid;
+}
+
+.one {
+    top: -5px;
+    left: 50px;
+    background-color: rgba(6, 122, 122, 0.966);
+}
+
+.two {
+    top: -5px;
+    right: 30px;
+    background-color: cyan;
+}
+
+.signForm {
+    /* min-height: 470px; */
+    /* height: 89%; */
+    margin: auto;
+    display: flex;
+    row-gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+}
+
+.all-input {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.password-confirmation, .username-email {
     padding: 0;
-    height: 450px;
+    /* height: 450px; */
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -29,12 +104,12 @@
     justify-content: space-evenly;
 }
 
-.signForm > ul > li {
+.pass-div, .conf-pass-div, .username-email div {
     display: flex;
     flex-direction: column;
 }
 
-.signForm > ul > li > input {
+.password-confirmation input, .username-email input {
     font-size: 15px;
     padding: 5px;
     width: 230px;
@@ -45,7 +120,7 @@
     background-color: white;
 }
 
-.signForm > ul > li > .signPass > input {
+.signPass input {
     font-size: 15px;
     padding: 5px;
     width: 230px;
@@ -74,12 +149,12 @@
     cursor: pointer;
 }
 
-.signForm > ul > li > label {
+.password-confirmation label, .username-email label {
     font-size: 20px;
     font-weight: bolder;
 }
 
-.signForm > button {
+.click-to-next{
     font-size: 20px;
     font-weight: bold;
     width: 220px;
@@ -92,38 +167,76 @@
     transition: all 0.3s linear;
 }
 
-.signForm > button:hover, .signForm > button:focus {
+.include-back {
+    display: flex;
+    gap: 35px;
+    
+}
+
+
+.click-to-sign{
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 3px;
+    background-color: rgba(29, 160, 242, 0.5);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s linear;
+}
+
+.bot {
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+    height: 50px;
+    background-color: orangered;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s linear;
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+.click-to-sign:hover, .click-to-sign:focus, .bot:hover, .bot:focus {
     color: white;
     box-shadow: 0 0 5px rgb(29, 161, 242);
 }
 
-.sign-up-page > p {
+.bot:hover, .bot:focus {
+    color: white;
+    box-shadow: 0 0 5px orangered;
+}
+
+.login-confirm {
     text-align: center;
     font-size: large;
 }
 
-.sign-up-page > p > span {
+.login-confirm > span {
     margin-left: 3px;
     color: rgb(29, 161, 242);
     cursor: pointer;
     transition: color 0.3s linear;
 }
 
-.sign-up-page > p > span:hover {
+.login-confirm > span:hover {
     opacity: 0.5;
     color: rgb(9, 130, 206);
 }
 
 @media screen and (min-width: 800px) {
-    .signForm > ul > li > input {
+    .password-confirmation input, .username-email input{
         width: 290px;
     }
 
-    .signForm > ul > li > .signPass > input {
+    .signPass > input {
         width: 290px;
     }
 
-    .signForm > button {
+    .click-to-next {
         width: 270px;
     }
 }

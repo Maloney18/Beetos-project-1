@@ -2,7 +2,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 
 import {} from '@fortawesome/free-brands-svg-icons';
 import {faEye,faEyeSlash} from '@fortawesome/free-regular-svg-icons';
-import {faPen, faFileArrowDown, faTrashCan, faSliders, faUser, faRightFromBracket, faFileCirclePlus, faHouse, faLongArrowLeft} from '@fortawesome/free-solid-svg-icons';
+import {faPen, faFileArrowDown, faTrashCan, faSliders, faUser, faRightFromBracket, faFileCirclePlus, faHouse, faLongArrowLeft, faLongArrowRight} from '@fortawesome/free-solid-svg-icons';
 
 
 library.add(
@@ -16,7 +16,8 @@ library.add(
     faHouse,
     faLongArrowLeft,
     faEye,
-    faEyeSlash
+    faEyeSlash,
+    faLongArrowRight
 );
 
 // export default Fontawesome

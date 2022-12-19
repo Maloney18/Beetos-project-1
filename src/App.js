@@ -48,22 +48,22 @@ function App() {
               </div> 
           }/>
           
-          <Route path='upload' element={<Upload/>}/>
+          <Route path='/upload' element={<Upload/>}/>
         </Route>
 
-        <Route path='login' element={
+        <Route path='/login' element={
             <LoginPage/>
         }/>
         
-        <Route path='reset-password' element={
+        <Route path='/reset-password' element={
           <ResetPass/>
         }/>
 
-        <Route path='sign-up' element={
+        <Route path='/sign-up' element={
           <SignUpPage />
         } />
 
-        <Route path='forget-password' element={
+        <Route path='/forget-password' element={
           <ForgetPass />
         } />
 
